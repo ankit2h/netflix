@@ -3,12 +3,10 @@ import { useDispatch } from "react-redux";
 import { setSidebar } from "../redux/sideSlice";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import useLogout from "../hooks/useLogout";
 import { setToggle } from "../redux/movieSlice";
 
 const Header = ({ hideUserControls = false }) => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   // Use optional chaining and fallback to avoid undefined errors
   const user = useSelector((store) => store.app?.user || null);

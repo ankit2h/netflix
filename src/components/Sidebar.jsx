@@ -8,7 +8,6 @@ import { useDispatch } from "react-redux";
 import { setSidebar } from "../redux/sideSlice";
 
 const Sidebar = ({ onClose }) => {
-  const open = useSelector((store) => store.sidebar.sidebar);
   const [openDropdown, setOpenDropdown] = useState(null);
 
   const dispatch = useDispatch();
