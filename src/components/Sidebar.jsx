@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "@fontsource/bebas-neue";
-import { ChevronDown, X, ChevronRight } from "lucide-react";
+import { X, ChevronRight } from "lucide-react";
 import { useDispatch } from "react-redux";
 import { setSidebar } from "../redux/sideSlice";
 

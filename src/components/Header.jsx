@@ -1,11 +1,8 @@
-import React from "react";
-import { FaBars } from "react-icons/fa";
+
 import { useDispatch } from "react-redux";
 import { setSidebar } from "../redux/sideSlice";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { useSelector } from "react-redux";
-import toast from "react-hot-toast";
-import { setUser } from "../redux/userSlice";
 import { useNavigate } from "react-router-dom";
 import useLogout from "../hooks/useLogout";
 import { setToggle } from "../redux/movieSlice";

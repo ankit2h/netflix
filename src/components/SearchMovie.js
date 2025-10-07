@@ -1,11 +1,7 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { options, SEARCH_MOVIE_URL } from "../utils/constant";
 import { useDispatch, useSelector } from "react-redux";
-import { setSearchMovieDetails } from "../redux/searchSlice";
 import useSearchMovie from "../hooks/useSearchMovie";
 import MovieList from "./MovieList";
-import { setLoading } from "../redux/userSlice";
 
 const SearchMovie = () => {
   const dispatch = useDispatch();
