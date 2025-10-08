@@ -93,7 +93,7 @@ const Sidebar = ({ onClose }) => {
       {/* Menu */}
       <ul className="space-y-2 px-2 flex-1 justify-center items-center">
         <div className="flex justify-center w-full">
-          <Link to={`https://preview.learnest.tech`}
+          <Link to={`https://home.learnest.tech`}
             className="px-4 py-2 mb-7 w-40 rounded-lg bg-gradient-to-r from-[#232326] to-[#18181b] cursor-pointer transition-all duration-200 border border-transparent hover:border-indigo-500 shadow-sm"
             style={{
               boxShadow: "0 0 8px #6366f1, 0 0 16px #6366f1, 0 0 24px #6366f1", // indigo-500
