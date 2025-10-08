@@ -51,7 +51,7 @@ const Browse = () => {
       {/* Content */}
       <div className="pt-20 sm:pt-24 px-4 sm:px-8 max-w-[1400px] mx-auto relative">
         <h1 className="text-5xl sm:text-7xl font-extrabold font-bebas text-netflix-red mb-6 sm:mb-8 drop-shadow-lg select-none tracking-widest text-center">
-          NETFLIX
+          STREAMER
         </h1>
         {toggle ? (
           <div className="bg-netflix bg-opacity-90 rounded-lg shadow-netflix p-4 sm:p-8 border border-[#333]">

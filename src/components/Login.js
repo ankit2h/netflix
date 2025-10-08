@@ -79,7 +79,7 @@ const Login = () => {
             {`${isLoading ? "loading..." : isLogin ? "Login" : "Signup"}`}
           </button>
           <p className="text-white mt-4 text-center">
-            {isLogin ? "New to Netflix?" : "Already have an account?"}
+            {isLogin ? "New to Streamer?" : "Already have an account?"}
             <span
               className="ml-1 text-[#e50914] font-semibold cursor-pointer hover:underline"
               onClick={loginHandler}
