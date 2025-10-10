@@ -1,10 +1,8 @@
 
-import { useEffect } from "react";
 import Header from "./Header";
 import MainContainer from "./MainContainer";
 import MovieContainer from "./MovieContainer";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import usePopularMovies from "../hooks/usePopularMovies";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
@@ -13,9 +11,7 @@ import SearchMovie from "./SearchMovie";
 import Sidebar from "./Sidebar";
 
 const Browse = () => {
-  const navigate = useNavigate();
   const open = useSelector((store) => store.sidebar.sidebar);
-  const user = useSelector((store) => store.app.user);
   const toggle = useSelector((store) => store.movie.toggle);
   const rehydrated = useSelector((state) => state._persist?.rehydrated);
 
@@ -24,11 +20,11 @@ const Browse = () => {
   useTopRatedMovies();
   useUpcomingMovies();
 
-  useEffect(() => {
-    if (rehydrated && !user) {
-      navigate("/");
-    }
-  }, [user, navigate, rehydrated]);
+  // useEffect(() => {
+  //   if (rehydrated && !user) {
+  //     navigate("/");
+  //   }
+  // }, [user, navigate, rehydrated]);
 
   if (!rehydrated) {
     return <div className="min-h-screen bg-black" />;
