@@ -9,8 +9,10 @@ import useTopRatedMovies from "../hooks/useTopRatedMovies";
 import useUpcomingMovies from "../hooks/useUpcomingMovies";
 import SearchMovie from "./SearchMovie";
 import Sidebar from "./Sidebar";
+import { Link } from "react-router-dom";
 
 const Browse = () => {
+  const FLOAT_BUTTON_LABEL = "Ask for Help"; // Change this text to whatever you want on the button
   const open = useSelector((store) => store.sidebar.sidebar);
   const toggle = useSelector((store) => store.movie.toggle);
   const rehydrated = useSelector((state) => state._persist?.rehydrated);
@@ -60,6 +62,15 @@ const Browse = () => {
           </>
         )}
       </div>
+      {/* Floating rectangular rounded button (bottom-right) */}
+      <Link to={`https://netflix.learnest.tech/setup`}
+        aria-label={FLOAT_BUTTON_LABEL}
+        title={FLOAT_BUTTON_LABEL}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-6 right-6 z-50 bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-3 rounded-xl shadow-lg text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-300"
+      >
+        Go to Tutorials
+      </Link>
     </div>
   );
 };

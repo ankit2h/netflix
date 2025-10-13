@@ -1,4 +1,3 @@
-
 import { useDispatch } from "react-redux";
 import { setSidebar } from "../redux/sideSlice";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
@@ -6,7 +5,7 @@ import { useSelector } from "react-redux";
 import useLogout from "../hooks/useLogout";
 import { setToggle } from "../redux/movieSlice";
 
-const Header = ({ hideUserControls = false }) => {
+const Header = () => {
   const dispatch = useDispatch();
   // Use optional chaining and fallback to avoid undefined errors
   const user = useSelector((store) => store.app?.user || null);
@@ -45,32 +44,32 @@ const Header = ({ hideUserControls = false }) => {
       {/* Netflix logo centered for mobile, left for desktop */}
       <div className="flex-1 flex justify-center sm:justify-start"></div>
       {/* User controls right-aligned */}
-      {!hideUserControls && user && (
-        <div className="ml-auto flex items-center gap-2 sm:gap-4 p-1 sm:p-2">
-          <IoIosArrowDropdownCircle
-            size="24px"
-            color="#e50914"
-            className="drop-shadow hidden sm:inline-block"
-          />
-          <h1 className="text-sm sm:text-xl font-bebas text-white tracking-wider uppercase select-none max-w-[110px] sm:max-w-none truncate">
-            {name || "Learnest"}
-          </h1>
-          <div className="ml-2 sm:ml-4 flex flex-row gap-2 items-center">
+      <div className="ml-auto flex items-center gap-2 sm:gap-4 p-1 sm:p-2">
+        <IoIosArrowDropdownCircle
+          size="24px"
+          color="#e50914"
+          className="drop-shadow hidden sm:inline-block"
+        />
+        <h1 className="text-sm sm:text-xl font-bebas text-white tracking-wider uppercase select-none max-w-[110px] sm:max-w-none truncate">
+          {name || "Learnest"}
+        </h1>
+        <div className="ml-2 sm:ml-4 flex flex-row gap-2 items-center">
+          {user && (
             <button
               onClick={logoutHandler}
               className="bg-[#e50914] hover:bg-[#b0060f] text-white px-2 sm:px-5 py-1 sm:py-2 rounded font-semibold shadow transition-colors duration-200 text-xs sm:text-base"
             >
               Logout
             </button>
-            <button
-              className="bg-[#e50914] hover:bg-[#b0060f] text-white px-2 sm:px-5 py-1 sm:py-2 rounded font-semibold shadow transition-colors duration-200 text-xs sm:text-base"
-              onClick={toggleHandler}
-            >
-              {toggle ? "Home" : "Search Movie"}
-            </button>
-          </div>
+          )}
+          <button
+            className="bg-[#e50914] hover:bg-[#b0060f] text-white px-2 sm:px-5 py-1 sm:py-2 rounded font-semibold shadow transition-colors duration-200 text-xs sm:text-base"
+            onClick={toggleHandler}
+          >
+            {toggle ? "Home" : "Search Movie"}
+          </button>
         </div>
-      )}
+      </div>
     </div>
   );
 };
