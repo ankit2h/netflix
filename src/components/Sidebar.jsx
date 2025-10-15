@@ -178,7 +178,7 @@ const Sidebar = ({ onClose }) => {
         </span>
 
         <Link
-          to={`https://netflix.learnest.tech/tutorial/Express%20Setup`}
+          to={`https://netflix.learnest.tech/`}
           className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-indigo-700 text-white font-bold shadow-lg hover:from-indigo-700 hover:to-indigo-500 transition-all duration-200 border-2 border-indigo-500 hover:border-white text-lg"
         >
           <svg
